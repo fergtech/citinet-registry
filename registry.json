@@ -1,0 +1,16 @@
+{
+    "hubs": [
+      {
+        "id": "hub1",
+        "name": "hub1",
+        "slug": "hub1",
+        "location": "Aberdeen Proving Ground, MD",
+        "description": "",
+        "tunnel_url": "https://hub1.tail42ec5e.ts.net",
+        "member_count": 2,
+        "online": true,
+        "registered_at": "2026-03-01T18:28:03.160Z"
+      }
+    ],
+    "updated_at": "2026-03-02T00:00:00Z"
+}
