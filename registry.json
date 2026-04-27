@@ -23,7 +23,7 @@
       "registered_at": "2026-03-07T00:00:00.000Z"
     },
     {
-      "id": "genesis",
+      "id": "c8d1a6e9-f297-4766-a412-239b902bfc26",
       "name": "genesis",
       "slug": "genesis",
       "location": "Aberdeen, Maryland",
@@ -32,8 +32,8 @@
       "member_count": 0,
       "online": false,
       "registered_at": "2026-04-26T16:38:10.825Z",
-      "last_seen": "2026-04-26T16:38:10.825Z"
+      "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-04-26T16:38:10.825Z"
+  "updated_at": "2026-04-27T12:50:06.750Z"
 }
