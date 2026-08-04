@@ -10,14 +10,14 @@
       "member_count": 0,
       "online": true,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-04T18:52:51.682Z",
+      "last_seen": "2026-08-04T18:53:07.859Z",
       "hub_icon_mode": "image",
       "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
       "hub_icon_gradient_from": "#1d4ed8",
       "hub_icon_gradient_to": "#0f766e",
       "hub_icon_solid_color": "",
-      "hub_icon_image_file_name": "team-icon.png"
+      "hub_icon_image_file_name": "citinet-network-hero.png"
     },
     {
       "id": "hub2",
@@ -43,5 +43,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-04T18:52:51.682Z"
+  "updated_at": "2026-08-04T18:53:07.859Z"
 }
