@@ -1,16 +1,16 @@
 {
   "hubs": [
     {
-      "id": "c8d1a6e9-f297-4766-a412-239b902bfc26",
+      "id": "hub1",
       "name": "genesis",
       "slug": "hub1",
       "location": "Aberdeen, Maryland",
       "description": "hub one description",
       "tunnel_url": "https://hub1.tail42ec5e.ts.net",
-      "member_count": 0,
+      "member_count": 48,
       "online": true,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-04T18:53:07.859Z",
+      "last_seen": "2026-08-04T20:44:22.227Z",
       "hub_icon_mode": "image",
       "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
@@ -43,5 +43,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-04T18:53:07.859Z"
+  "updated_at": "2026-08-04T20:44:22.227Z"
 }
