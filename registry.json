@@ -7,10 +7,10 @@
       "location": "Aberdeen, Maryland",
       "description": "hub one description",
       "tunnel_url": "https://hub1.tail42ec5e.ts.net",
-      "member_count": 48,
-      "online": false,
+      "member_count": 0,
+      "online": true,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-05T13:51:09.920Z",
+      "last_seen": "2026-08-05T14:48:13.727Z",
       "hub_icon_mode": "image",
       "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
@@ -43,5 +43,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-05T13:51:09.920Z"
+  "updated_at": "2026-08-05T14:48:13.727Z"
 }
