@@ -8,9 +8,9 @@
       "description": "hub one description",
       "tunnel_url": "https://hub1.tail42ec5e.ts.net",
       "member_count": 48,
-      "online": true,
+      "online": false,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-05T11:43:30.856Z",
+      "last_seen": "2026-08-05T13:51:09.920Z",
       "hub_icon_mode": "image",
       "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
@@ -43,5 +43,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-05T11:43:30.856Z"
+  "updated_at": "2026-08-05T13:51:09.920Z"
 }
