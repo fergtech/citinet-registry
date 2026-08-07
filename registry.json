@@ -9,10 +9,10 @@
       "lat": null,
       "lng": null,
       "tunnel_url": "https://hub1.tail42ec5e.ts.net",
-      "member_count": 48,
+      "member_count": 0,
       "online": true,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-07T00:11:45.905Z",
+      "last_seen": "2026-08-07T00:41:38.148Z",
       "hub_icon_mode": "image",
       "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
@@ -45,5 +45,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-07T00:11:45.905Z"
+  "updated_at": "2026-08-07T00:41:38.148Z"
 }
