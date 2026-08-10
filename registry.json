@@ -8,11 +8,18 @@
       "description": "This is just a testing hub and serve no other purpose beyond testing and development for the greater Citinet infrastructure.",
       "lat": null,
       "lng": null,
-      "tunnel_url": "https://hub1.tail42ec5e.ts.net",
+      "tunnel_url": "https://hub1.hub.citinet.cloud",
       "member_count": 48,
       "online": false,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-10T17:37:10.330Z"
+      "last_seen": "2026-08-10T17:40:39.581Z",
+      "hub_icon_mode": "image",
+      "hub_icon_symbol": "waypoints",
+      "hub_icon_bg_mode": "gradient",
+      "hub_icon_gradient_from": "#1d4ed8",
+      "hub_icon_gradient_to": "#0f766e",
+      "hub_icon_solid_color": "",
+      "hub_icon_image_file_name": "citinet-network-hero.png"
     },
     {
       "id": "hub2",
@@ -38,5 +45,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-10T17:37:10.330Z"
+  "updated_at": "2026-08-10T17:40:39.581Z"
 }
