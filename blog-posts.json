@@ -1,0 +1,1026 @@
+{
+  "hub1": {
+    "notes": [
+      {
+        "id": "2b15e046-190b-44f5-874b-1e89aa8b813e",
+        "title": "Citinet's Privacy Model",
+        "web_body_plain": "A security model explains what's protected from attackers. A privacy model answers a different question: what data exists at all, who sees it, and where does it go. This is that answer, plainly.\n\nNo ads, no data sale, no tracking pipeline\n\nCitinet doesn't run ads. There's no analytics-and-advertising business model here to fund, which means there's no incentive baked into the product to harvest behavioral data. Nothing about how a hub works involves selling, renting, or sharing member data with advertisers or data brokers, because there's no mechanism in the product that does that at all; not \"we promise not to,\" but \"the pipe doesn't exist.\"\n\nWhat's public, and why\n\nIf you post something to your hub's feed, a space, or a public event, that's public, the same as posting on any forum or community platform. Your hub's members (and, if you've set your hub or profile to be publicly discoverable, anyone) can see it. That's the whole point of a community feed: it's meant to be read.\n\nYour profile; display name, bio, the tags you pick, your public posts, works the same way. You choose your profile's visibility (public, hub members only, or private), and that choice is respected.\n\nWhat's private, and what \"private\" actually means here\n\nDirect messages, private notes, and private files are end-to-end encrypted; encrypted on your device before they're sent, decrypted only on the receiving device. The hub's own database stores unreadable ciphertext. This isn't \"we promise not to look\", it's \"there is nothing readable to look at\" without a key that never leaves your device. The technical detail is in the companion Security & Trust Model post; the short version is: your hub operator cannot read your private notes or your messages.\n\nThe one honest exception: AI conversations (currently)\n\nIf your hub has an AI assistant enabled, conversations with it are not end-to-end encrypted, and can't be: the AI model runs on the hub's own server, and it needs to actually read your message to generate a response. There's no way to encrypt a prompt from a server-side AI and still have that AI answer it; that's true of any product with a server-side AI feature, not a Citinet-specific shortcoming.\n\nThis matters enough to say clearly, on its own, separate from everything else: \"your notes are encrypted\" and \"your AI conversations are encrypted\" are not the same claim. If your hub runs local AI, treat conversations with it more like a conversation with a person who works at the hub than like a private note to yourself.\n\nWhat leaves your hub at all\n\nCitinet hubs are independent: most of what happens on your hub stays on your hub's own database. A small amount of information does leave, and here's what it is:\n\n\n\n\n\nIf your hub is set to be publicly discoverable, its name, location (general area by default), description, and member count are shared with a central directory so people can find it, the same way a public forum is listed somewhere. This is opt-in at hub creation, not automatic.\n\n\n\nAutomatic HTTPS setup involves an exchange with a central certificate service that issues your hub's certificate and points your hub's subdomain at its network address, so devices on your network can reach it securely. That service manages the DNS record and certificate needed to make this work; it never sees your hub's content, and holds nothing beyond what's needed to keep that address and certificate current.\n\n\n\nNothing else leaves by default. No third-party analytics, no ad pixels, no data pipeline to anywhere else.\n\nMetadata is a real, known limitation\n\nEncryption protects the content of a private message or note. It doesn't fully hide that a conversation exists, roughly when it happened, or its approximate size; that's a limitation shared by essentially every end-to-end encrypted messaging system that exists, including the well-known ones, not something unique to Citinet. We're not going to claim otherwise.\n\nYour hub operator can see member-level information\n\nUsernames, the fact that you joined, your last-active time, and (if you provided one) an email address are visible to your hub's operator, the same way any community organizer knows who's a member of their community. This is inherent to joining someone's hub, not a hidden data-collection practice.\n\nDeleting your account\n\nDeleting your account removes your profile and account data from the hub.\n\nContent you posted publicly (posts, replies) that other people may have already seen, saved, or built on top of behaves the way public content on any platform does; deleting your account doesn't reach into other people's devices or unwind a public conversation already in progress. Your encrypted private content (notes, messages, files) is deleted along with your account and was never readable by anyone but you to begin with.\n\nThe short version\n\nPublic is public. Private is genuinely private; encrypted on your device, unreadable by the hub, with one clearly-marked exception (server-side AI, which can't be end-to-end encrypted by its nature). Nothing is sold, nothing is tracked for ads, and almost nothing leaves your hub at all. That's the actual shape of it: not a promise to trust, a design to check.",
+        "web_body_rich": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A ",
+                  "type": "text"
+                },
+                {
+                  "text": "security model",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "rel": "noopener noreferrer nofollow",
+                        "href": "https://info.citinet.cloud/blog/296ddd69-802f-4ce4-b609-cb169f3f8d99",
+                        "class": null,
+                        "title": null,
+                        "target": "_blank"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": " explains what's protected from attackers. A privacy model answers a different question: what data exists at all, who sees it, and where does it go. This is that answer, plainly.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "No ads, no data sale, no tracking pipeline",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Citinet doesn't run ads. There's no analytics-and-advertising business model here to fund, which means there's no incentive baked into the product to harvest behavioral data. Nothing about how a hub works involves selling, renting, or sharing member data with advertisers or data brokers, because there's no mechanism in the product that does that at all; not \"we promise not to,\" but \"the pipe doesn't exist.\"",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What's public, and why",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "If you post something to your hub's feed, a space, or a public event, that's public, the same as posting on any forum or community platform. Your hub's members (and, if you've set your hub or profile to be publicly discoverable, anyone) can see it. That's the whole point of a community feed: it's meant to be read.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Your profile; display name, bio, the tags you pick, your public posts, works the same way. You choose your profile's visibility (public, hub members only, or private), and that choice is respected.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What's private, and what \"private\" actually means here",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Direct messages, private notes, and private files are end-to-end encrypted; encrypted on your device before they're sent, decrypted only on the receiving device. The hub's own database stores unreadable ciphertext. This isn't \"we promise not to look\", it's \"there is nothing readable to look at\" without a key that never leaves your device. The technical detail is in the companion ",
+                  "type": "text"
+                },
+                {
+                  "text": "Security & Trust Model",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "rel": "noopener noreferrer nofollow",
+                        "href": "https://info.citinet.cloud/blog/296ddd69-802f-4ce4-b609-cb169f3f8d99",
+                        "class": null,
+                        "title": null,
+                        "target": "_blank"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": " post; the short version is: your hub operator cannot read your private notes or your messages.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 2
+              },
+              "content": [
+                {
+                  "text": "The one honest exception: AI conversations (currently)",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "If your hub has an AI assistant enabled, conversations with it are not end-to-end encrypted, and can't be: the AI model runs on the hub's own server, and it needs to actually read your message to generate a response. There's no way to encrypt a prompt from a server-side AI and still have that AI answer it; that's true of any product with a server-side AI feature, not a Citinet-specific shortcoming.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "This matters enough to say clearly, on its own, separate from everything else: \"your notes are encrypted\" and \"your AI conversations are encrypted\" are not the same claim. If your hub runs local AI, treat conversations with it more like a conversation with a person who works at the hub than like a private note to yourself.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What leaves your hub at all",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Citinet hubs are independent: most of what happens on your hub stays on your hub's own database. A small amount of information does leave, and here's what it is:",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "If your hub is set to be publicly discoverable, its name, location (general area by default), description, and member count are shared with a central directory so people can find it, the same way a public forum is listed somewhere. This is opt-in at hub creation, not automatic.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Automatic HTTPS setup involves an exchange with a central certificate service that issues your hub's certificate and points your hub's subdomain at its network address, so devices on your network can reach it securely. That service manages the DNS record and certificate needed to make this work; it never sees your hub's content, and holds nothing beyond what's needed to keep that address and certificate current.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Nothing else leaves by default. No third-party analytics, no ad pixels, no data pipeline to anywhere else.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "Metadata is a real, known limitation",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Encryption protects the content of a private message or note. It doesn't fully hide that a conversation exists, roughly when it happened, or its approximate size; that's a limitation shared by essentially every end-to-end encrypted messaging system that exists, including the well-known ones, not something unique to Citinet. We're not going to claim otherwise.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 2
+              },
+              "content": [
+                {
+                  "text": "Your hub operator can see member-level information",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Usernames, the fact that you joined, your last-active time, and (if you provided one) an email address are visible to your hub's operator, the same way any community organizer knows who's a member of their community. This is inherent to joining someone's hub, not a hidden data-collection practice.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "Deleting your account",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Deleting your account removes your profile and account data from the hub.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Content you posted publicly (posts, replies) that other people may have already seen, saved, or built on top of behaves the way public content on any platform does; deleting your account doesn't reach into other people's devices or unwind a public conversation already in progress. Your encrypted private content (notes, messages, files) is deleted along with your account and was never readable by anyone but you to begin with.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "The short version",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Public is public. Private is genuinely private; encrypted on your device, unreadable by the hub, with one clearly-marked exception (server-side AI, which can't be end-to-end encrypted by its nature). Nothing is sold, nothing is tracked for ads, and almost nothing leaves your hub at all. That's the actual shape of it: not a promise to trust, a design to check.",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        "color": null,
+        "created_at": "2026-08-05T15:16:30.869Z",
+        "updated_at": "2026-08-11T02:31:54.981Z",
+        "author": "zee"
+      },
+      {
+        "id": "296ddd69-802f-4ce4-b609-cb169f3f8d99",
+        "title": "Citinet's Security & Trust Model",
+        "web_body_plain": "Every community that runs a Citinet hub is trusting someone to operate it; that's true of any self-hosted software, and it's worth being direct about what that trust actually means before you join one, or start one.\n\nThis is that explanation. Not a marketing page. What's actually protected, what isn't, and why.\n\nThe honest starting point\n\nCitinet hubs are self-hosted: a community (or one person on a community's behalf) runs the server. That operator controls the machine the hub lives on. Full stop. \n\nNo amount of clever engineering removes that; it's the nature of \"you host it, you control it,\" and it's true of Mastodon, Nextcloud, WordPress, or any other self-hosted platform, not something specific to Citinet.\n\nSo the real question was never \"can the operator see things.\" It's: what can they see, what can't they, and does that line make sense?\n\nWhat the operator can see: the public layer\n\nPosts, comments, spaces, events, marketplace listings, public profiles, the moderation log. All of it is readable by the hub's own database, because the hub needs to search it, and moderate it. This is the same model as any forum, any Mastodon instance, any community platform. Nothing new here, and nothing hidden: if you post it publicly on a hub, the hub can see it.\n\nWhat the operator can't see: the private layer\n\nDirect messages, private notes, and private files are encrypted in your browser before they ever reach the server. The hub stores ciphertext; ciphertext = mathematically unable to turn back into readable content, because the decryption keys never leaves your device.\n\nConcretely:\n\n\n\n\n\nYour device generates its own key pair. The private half never leaves your browser's local storage.\n\n\n\nOnly the public half; useless for decrypt\n\n\n\nMessages between two people use a key derived from both of their key pairs, computed independently on each device.\n\n\n\nNotes and files use a separate content key, generated the same way: on your device, never uploaded.\n\nEven someone with full access to the hub's database and file storage sees only ciphertext for this layer. Not \"hard to read\"; mathematically not decryptable without a key that was never sent to them.\n\nThe one place this gets subtle: recovery\n\nEncryption keys that live only on your device create an obvious problem: lose the device, lose the keys, lose access to your own encrypted content. Every end-to-end encrypted system has to answer this somehow.\n\nCitinet's answer: at signup, you're given a recovery phrase; seven random words, generated by the app, shown to you exactly once. That phrase, not your login password, is what unlocks your encrypted content on a new device. Save it somewhere safe (a password manager, written down, wherever you'd keep something you can't afford to lose); it's the only way back in if you ever need to recover your notes or messages on a device that doesn't already have your keys.\n\nWhy a separate phrase instead of just using your login password? Because your login password and your encryption key need to be independent secrets. If they were the same thing, then anyone who could guess your login password, through a weak or common password, cracked offline, would also be able to decrypt your private content. Splitting them means a guessed password only grants login access to your account. It does not hand over your encrypted notes or messages. Two different failure modes, contained separately, the same way a house key and a safe combination are usually not the same number.\n\nThis is the same idea behind a cryptocurrency wallet's seed phrase, or a password manager's recovery key: the thing that unlocks your data is generated for you, not chosen by you, specifically so it can't be a weak, guessable password.\n\nWhat actually protects a hub from outside attackers\n\nEncryption protects data at rest from the operator. Separately, the hub itself has to be defended against attackers who aren't the operator at all; people just trying to get in from the internet. That's ordinary infrastructure security, and it matters just as much:\n\n\n\n\n\nEvery connection is encrypted in transit. Each hub gets a real, browser-trusted HTTPS certificate automatically; no plaintext path in or out.\n\n\n\nEvery database query is parameterized. No SQL injection surface: user input is never concatenated into a query string.\n\n\n\nEvery route that should require permission does. Every endpoint in the hub's API (all of them) has been individually audited to confirm it requires the right login state and the right role (member, moderator, admin) before it does anything sensitive.\n\n\n\nLogin is rate-limited and passwords are hashed, never stored in reversible form, with a real strength requirement; not just a length minimum, but a check against common/guessable passwords too. \n\n\n\nSessions are cryptographically random tokers, and they expire.\n\n\n\nFile uploads are restricted and validated: executable file types are blocked at upload, and served files are only ever rendered as their actual content type, never trusted to render as something more dangerous. \n\nNone of this is unusual for well-run infrastructure. It's the baseline any service handling real people's data should meet, and Citinet hubs are built to meet it by default; not something a community has to configure correctly themselves.\n\nWhat we don't claim\n\n\n\n\n\nNo independent third-party security audit has been done yet. Everything above reflects our own internal review, not an outside firm's sign-off. That's a meaningful distinction, and we're not going to pretend otherwise.\n\n\n\nA self-hosted hub's security is partly the operator's responsibility too; keeping the server's OS updated, not exposing ports it doesn't need to, general server hygiene. Citinet handles what it can handle for you (automatic HTTPS, hardened defaults), but \"self-hosted\" means some of this is genuinely yours.\n\n\n\nMetadata isn't the same as content. Encryption protects what you said, not always the fact that you said something to someone, or when, or roughly how much. That's a limitation shared by essentially every end-to-end encrypted system, including the well-known ones; it's a real, known trade-off, not an oversight.                                    \n\nIf you find a problem\n\nIf you think you've found a genuine security issue, please report it through an issue on the GitHub repository rather than posting it publicly first; we'd rather fix it quietly than have it sit exploitable while people are still using affected hubs.\n\nThe bottom line\n\nCitinet's trust model isn't \"trust no one\" and it isn't \"trust everyone with everything.\" It's closer to: the community that runs your hub can see what you chose to make public, and moderate accordingly; the same as any community platform. What you keep private stays private, protected by keys that live on your device and nowhere else, recoverable only by a phrase generated for you and shown to you once.\n\nThat's a real, specific claim, not a vague promise. We'd rather you understand exactly where the line is than take our word for \"it's secure.\"",
+        "web_body_rich": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Every community that runs a Citinet hub is trusting someone to operate it; that's true of any self-hosted software, and it's worth being direct about what that trust actually means before you join one, or start one.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "This is that explanation. Not a marketing page. What's actually protected, what isn't, and why.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "The honest starting point",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Citinet hubs are self-hosted: a community (or one person on a community's behalf) runs the server. That operator controls the machine the hub lives on. Full stop. ",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "No amount of clever engineering removes that; it's the nature of \"you host it, you control it,\" and it's true of Mastodon, Nextcloud, WordPress, or any other self-hosted platform, not something specific to Citinet.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "So the real question was never \"can the operator see things.\" It's: what can they see, what can't they, and does that line make sense?",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What the operator can see: the public layer",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Posts, comments, spaces, events, marketplace listings, public profiles, the moderation log. All of it is readable by the hub's own database, because the hub needs to search it, and moderate it. This is the same model as any forum, any Mastodon instance, any community platform. Nothing new here, and nothing hidden: if you post it publicly on a hub, the hub can see it.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What the operator can't see: the private layer",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Direct messages, private notes, and private files are encrypted in your browser before they ever reach the server. The hub stores ciphertext; ciphertext = mathematically unable to turn back into readable content, because the decryption keys never leaves your device.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 3
+              },
+              "content": [
+                {
+                  "text": "Concretely:",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Your device generates its own key pair. The private half never leaves your browser's local storage.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Only the public half; useless for decrypt",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Messages between two people use a key derived from both of their key pairs, computed independently on each device.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Notes and files use a separate content key, generated the same way: on your device, never uploaded.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Even someone with full access to the hub's database and file storage sees only ciphertext for this layer. Not \"hard to read\"; mathematically not decryptable without a key that was never sent to them.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "The one place this gets subtle: recovery",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Encryption keys that live only on your device create an obvious problem: lose the device, lose the keys, lose access to your own encrypted content. Every end-to-end encrypted system has to answer this somehow.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Citinet's answer: at signup, you're given a recovery phrase; seven random words, generated by the app, shown to you exactly once. That phrase, not your login password, is what unlocks your encrypted content on a new device. Save it somewhere safe (a password manager, written down, wherever you'd keep something you can't afford to lose); it's the only way back in if you ever need to recover your notes or messages on a device that doesn't already have your keys.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Why a separate phrase instead of just using your login password? Because your login password and your encryption key need to be independent secrets. If they were the same thing, then anyone who could guess your login password, through a weak or common password, cracked offline, would also be able to decrypt your private content. Splitting them means a guessed password only grants login access to your account. It does not hand over your encrypted notes or messages. Two different failure modes, contained separately, the same way a house key and a safe combination are usually not the same number.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "This is the same idea behind a cryptocurrency wallet's seed phrase, or a password manager's recovery key: the thing that unlocks your data is generated for you, not chosen by you, specifically so it can't be a weak, guessable password.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What actually protects a hub from outside attackers",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Encryption protects data at rest from the operator. Separately, the hub itself has to be defended against attackers who aren't the operator at all; people just trying to get in from the internet. That's ordinary infrastructure security, and it matters just as much:",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Every connection is encrypted in transit. Each hub gets a real, browser-trusted HTTPS certificate automatically; no plaintext path in or out.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Every database query is parameterized. No SQL injection surface: user input is never concatenated into a query string.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Every route that should require permission does. Every endpoint in the hub's API (all of them) has been individually audited to confirm it requires the right login state and the right role (member, moderator, admin) before it does anything sensitive.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Login is rate-limited and passwords are hashed, never stored in reversible form, with a real strength requirement; not just a length minimum, but a check against common/guessable passwords too. ",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Sessions are cryptographically random tokers, and they expire.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "File uploads are restricted and validated: executable file types are blocked at upload, and served files are only ever rendered as their actual content type, never trusted to render as something more dangerous. ",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "None of this is unusual for well-run infrastructure. It's the baseline any service handling real people's data should meet, and Citinet hubs are built to meet it by default; not something a community has to configure correctly themselves.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "What we don't claim",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "No independent third-party security audit has been done yet. Everything above reflects our own internal review, not an outside firm's sign-off. That's a meaningful distinction, and we're not going to pretend otherwise.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "A self-hosted hub's security is partly the operator's responsibility too; keeping the server's OS updated, not exposing ports it doesn't need to, general server hygiene. Citinet handles what it can handle for you (automatic HTTPS, hardened defaults), but \"self-hosted\" means some of this is genuinely yours.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Metadata isn't the same as content. Encryption protects what you said, not always the fact that you said something to someone, or when, or roughly how much. That's a limitation shared by essentially every end-to-end encrypted system, including the well-known ones; it's a real, known trade-off, not an oversight.                                    ",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "If you find a problem",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "If you think you've found a genuine security issue, please report it through an issue on the GitHub repository rather than posting it publicly first; we'd rather fix it quietly than have it sit exploitable while people are still using affected hubs.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 1
+              },
+              "content": [
+                {
+                  "text": "The bottom line",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Citinet's trust model isn't \"trust no one\" and it isn't \"trust everyone with everything.\" It's closer to: the community that runs your hub can see what you chose to make public, and moderate accordingly; the same as any community platform. What you keep private stays private, protected by keys that live on your device and nowhere else, recoverable only by a phrase generated for you and shown to you once.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "That's a real, specific claim, not a vague promise. We'd rather you understand exactly where the line is than take our word for \"it's secure.\"",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        "color": null,
+        "created_at": "2026-08-05T14:42:44.884Z",
+        "updated_at": "2026-08-11T02:31:51.460Z",
+        "author": "zee"
+      },
+      {
+        "id": "ccda28c6-2001-4fb5-b233-9d4fec40f948",
+        "title": "Afrotech Baltimore 2026",
+        "web_body_plain": "Afrotech networking even; tips and advice given, plans and connections made.\n\n\n\nAdvice, questions and tips for Citinet:\n\n\n\n\n\nsecurity: how is it that hub host/admin can’t see files stored on their system/hub?\n\n\n\nListening to me explain overwhelms, confuses, is overly technical to the lay or non technical person. Make more relatable, use analogies, universal language…do story telling.\n\n\n\nWhy should or would people care about this or using it?\n\n\n\nBest use cases and purpose of this project in 30secs\n\n\n\nHosting websites and apps can be expensive mostly as it’s paying for space/storage and compute. Can citinet host websites?\n\n\n\nSelling point to businesses:\n\n\n\n\n\nhave your visitors of your physical space auto connect to the portal upon connecting to hubs network\n\n\n\nDownloads to their Home Screen of phone/device\n\n\n\nCan connect to all things your business and Citinets out of box features\n\n\n\nBuild community around your brand or service or products\n\n",
+        "web_body_rich": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Afrotech networking even; tips and advice given, plans and connections made.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph"
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Advice, questions and tips for ",
+                  "type": "text"
+                },
+                {
+                  "text": "Citinet",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "rel": "noopener noreferrer nofollow",
+                        "href": "https://citinet.cloud",
+                        "class": null,
+                        "title": null,
+                        "target": "_blank"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": ":",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "security",
+                          "type": "text",
+                          "marks": [
+                            {
+                              "type": "bold"
+                            }
+                          ]
+                        },
+                        {
+                          "text": ": how is it that hub host/admin can’t see files stored on their system/hub?",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Listening to me explain overwhelms, confuses, is overly technical to the lay or non technical person. Make more relatable, use analogies, universal language…do story telling.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Why should or would people care about this or using it?",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Best use cases and purpose of this project in 30secs",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Hosting websites and apps can be expensive mostly as it’s paying for space/storage and compute. Can citinet host websites?",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "attrs": {
+                "src": "http://localhost:9090/api/public/files/214409_medium.mp4",
+                "mimeType": "video/mp4"
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Selling point to businesses:",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "have your visitors of your physical space auto connect to the portal upon connecting to hubs network",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Downloads to their Home Screen of phone/device",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Can connect to all things your business and Citinets out of box features",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Build community around your brand or service or products",
+                          "type": "text",
+                          "marks": [
+                            {
+                              "type": "underline"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "color": null,
+        "created_at": "2026-04-13T13:38:56.990Z",
+        "updated_at": "2026-05-20T23:53:31.698Z",
+        "author": "zee"
+      }
+    ],
+    "updated_at": "2026-08-11T02:38:46.222Z"
+  }
+}
