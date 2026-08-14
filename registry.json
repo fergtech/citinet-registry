@@ -2,24 +2,24 @@
   "hubs": [
     {
       "id": "hub1",
-      "name": "hub1",
+      "name": "genesis",
       "slug": "hub1",
-      "location": "location",
-      "description": "",
+      "location": "Aberdeen, Maryland",
+      "description": "This is just a testing hub and serve no other purpose beyond testing and development for the greater Citinet infrastructure.",
       "lat": null,
       "lng": null,
       "tunnel_url": "https://hub1.hub.citinet.cloud",
       "member_count": 48,
       "online": true,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-08-13T21:19:25.617Z",
-      "hub_icon_mode": "preset",
-      "hub_icon_symbol": "hexagon",
+      "last_seen": "2026-08-14T03:19:14.423Z",
+      "hub_icon_mode": "image",
+      "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
-      "hub_icon_gradient_from": "#2563eb",
-      "hub_icon_gradient_to": "#9333ea",
+      "hub_icon_gradient_from": "#1d4ed8",
+      "hub_icon_gradient_to": "#0f766e",
       "hub_icon_solid_color": "",
-      "hub_icon_image_file_name": ""
+      "hub_icon_image_file_name": "citinet-network-hero.png"
     },
     {
       "id": "hub2",
@@ -45,5 +45,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-08-13T21:19:25.617Z"
+  "updated_at": "2026-08-14T03:19:14.423Z"
 }
