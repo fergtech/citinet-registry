@@ -43,7 +43,21 @@
       "online": false,
       "registered_at": "2026-04-26T16:38:10.825Z",
       "last_seen": "2026-04-27T12:50:06.750Z"
+    },
+    {
+      "id": "claude-verify-temp",
+      "name": "claude-verify-temp",
+      "slug": "claude-verify-temp",
+      "location": "",
+      "description": "",
+      "lat": null,
+      "lng": null,
+      "tunnel_url": "https://example.invalid",
+      "member_count": 0,
+      "online": true,
+      "registered_at": "2026-08-30T16:27:57.855Z",
+      "last_seen": "2026-08-30T16:27:57.855Z"
     }
   ],
-  "updated_at": "2026-08-19T21:18:53.518Z"
+  "updated_at": "2026-08-30T16:27:57.855Z"
 }
