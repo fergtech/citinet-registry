@@ -13,7 +13,7 @@
       "online": true,
       "restarting_since": null,
       "registered_at": "2026-03-01T18:28:03.160Z",
-      "last_seen": "2026-09-11T00:57:35.250Z",
+      "last_seen": "2026-09-11T06:56:34.417Z",
       "hub_icon_mode": "image",
       "hub_icon_symbol": "waypoints",
       "hub_icon_bg_mode": "gradient",
@@ -46,5 +46,5 @@
       "last_seen": "2026-04-27T12:50:06.750Z"
     }
   ],
-  "updated_at": "2026-09-11T00:57:35.250Z"
+  "updated_at": "2026-09-11T06:56:34.417Z"
 }
