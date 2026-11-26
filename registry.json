@@ -27,7 +27,7 @@
       "name": "hub2",
       "slug": "hub2",
       "location": "Columbia, Maryland",
-      "description": "description for hub 2",
+      "description": "the Columbia, MD hub",
       "lat": null,
       "lng": null,
       "tunnel_url": "http://localhost:9090",
@@ -35,7 +35,7 @@
       "online": true,
       "restarting_since": null,
       "registered_at": "2026-03-07T00:00:00.000Z",
-      "last_seen": "2026-11-26T23:02:08.543Z",
+      "last_seen": "2026-11-26T23:02:35.835Z",
       "hub_icon_mode": "preset",
       "hub_icon_symbol": "building",
       "hub_icon_bg_mode": "gradient",
@@ -45,5 +45,5 @@
       "hub_icon_image_file_name": ""
     }
   ],
-  "updated_at": "2026-11-26T23:02:08.543Z"
+  "updated_at": "2026-11-26T23:02:35.835Z"
 }
