@@ -23,28 +23,27 @@
       "hub_icon_image_file_name": "citinet-network-hero.png"
     },
     {
-      "id": "hub2",
+      "id": "583a6b0e-745e-4007-93b4-08183a78f945",
       "name": "hub2",
       "slug": "hub2",
       "location": "Columbia, Maryland",
-      "description": "",
-      "tunnel_url": "https://hub2.tail42ec5e.ts.net",
+      "description": "description for hub 2",
+      "lat": null,
+      "lng": null,
+      "tunnel_url": "http://localhost:9090",
       "member_count": 1,
       "online": true,
-      "registered_at": "2026-03-07T00:00:00.000Z"
-    },
-    {
-      "id": "c8d1a6e9-f297-4766-a412-239b902bfc26",
-      "name": "genesis",
-      "slug": "genesis",
-      "location": "Aberdeen, Maryland",
-      "description": "hub one description",
-      "tunnel_url": "http://localhost:9090",
-      "member_count": 0,
-      "online": false,
-      "registered_at": "2026-04-26T16:38:10.825Z",
-      "last_seen": "2026-04-27T12:50:06.750Z"
+      "restarting_since": null,
+      "registered_at": "2026-03-07T00:00:00.000Z",
+      "last_seen": "2026-11-26T23:01:56.834Z",
+      "hub_icon_mode": "preset",
+      "hub_icon_symbol": "building",
+      "hub_icon_bg_mode": "gradient",
+      "hub_icon_gradient_from": "#2563eb",
+      "hub_icon_gradient_to": "#9333ea",
+      "hub_icon_solid_color": "",
+      "hub_icon_image_file_name": ""
     }
   ],
-  "updated_at": "2026-11-26T01:41:05.821Z"
+  "updated_at": "2026-11-26T23:01:56.834Z"
 }
